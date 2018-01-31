@@ -30,15 +30,41 @@ namespace ProfileViewTest
 
         public void PageLoaded(object sender, RoutedEventArgs e)
         {
-            string[] fileEntries = Directory.GetFiles(@"C:\Users\Ricky\Documents\");
 
+            IEnumerable<String> filesD = GetAllFiles("D:\\Ricky\\Documents\\", "*.cs");
+            IEnumerable<String> filesC = GetAllFiles("C:\\Users\\Ricky\\source\\", "*.cs");
+            IEnumerable<String> files = filesC.Concat(filesD);
 
-            foreach (string fileName in fileEntries)
+            foreach (string fileName in files)
             {
                 fileView.Items.Add(fileName);
             }
-                
         }
+
+        IEnumerable<String> GetAllFiles(string path, string searchPattern)
+        {
+            return System.IO.Directory.EnumerateFiles(path, searchPattern).Union(
+                System.IO.Directory.EnumerateDirectories(path).SelectMany(d =>
+                {
+                    try
+                    {
+                        return GetAllFiles(d, searchPattern);
+                    }
+                    catch (UnauthorizedAccessException e)
+                    {
+                        return Enumerable.Empty<String>();
+                    }
+                }));
+        }
+
+        private void ScrollViewer_PreviewMouseWheel(object sender, System.Windows.Input.MouseWheelEventArgs e)
+        {
+            ScrollViewer scv = (ScrollViewer)sender;
+            scv.ScrollToVerticalOffset(scv.VerticalOffset - (e.Delta/3));
+            e.Handled = true;
+        }
+
+
 
     }
 }

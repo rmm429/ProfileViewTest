@@ -5,17 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProfileViewTest"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="400" Width="600">
 
     <Grid>
-        
-        <StackPanel>
-            
-            <ListView Margin="0 75 0 0"  x:Name="fileView" />
 
-        </StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
-        <Button Content="Select" HorizontalAlignment="Left" Margin="408,274,0,0" VerticalAlignment="Top" Width="76"/>
+        <Label Margin="10 0 0 10" Content="Choose a Configuration" FontSize="20" />
+
+        <ScrollViewer Margin="10 0 0 0" Grid.Row="1"
+                      ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Visible"
+                      PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
+
+            <ListView x:Name="fileView" />
+
+        </ScrollViewer>
+        <!--
+        <ListView Margin="0 75 0 0"  x:Name="fileView" />
+        -->
+
+        <Button Grid.Row="2" Margin="400 10 25 10" Content="Select"/>
 
     </Grid>
 
