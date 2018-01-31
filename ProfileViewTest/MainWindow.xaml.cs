@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,21 @@ namespace ProfileViewTest
         public MainWindow()
         {
             InitializeComponent();
+
+            Loaded += PageLoaded;
         }
+
+        public void PageLoaded(object sender, RoutedEventArgs e)
+        {
+            string[] fileEntries = Directory.GetFiles(@"C:\Users\Ricky\Documents\");
+
+
+            foreach (string fileName in fileEntries)
+            {
+                fileView.Items.Add(fileName);
+            }
+                
+        }
+
     }
 }

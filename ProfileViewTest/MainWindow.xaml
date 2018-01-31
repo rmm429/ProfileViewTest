@@ -8,10 +8,12 @@
         Title="MainWindow" Height="350" Width="525">
 
     <Grid>
+        
+        <StackPanel>
+            
+            <ListView Margin="0 75 0 0"  x:Name="fileView" />
 
-        <Grid Width="450" Height="200">
-
-        </Grid>
+        </StackPanel>
 
         <Button Content="Select" HorizontalAlignment="Left" Margin="408,274,0,0" VerticalAlignment="Top" Width="76"/>
 

@@ -1,0 +1,14 @@
+C:\Users\Ricky\source\repos\ProfileViewTest\ProfileViewTest\bin\Debug\ProfileViewTest.exe.config
+C:\Users\Ricky\source\repos\ProfileViewTest\ProfileViewTest\bin\Debug\ProfileViewTest.exe
+C:\Users\Ricky\source\repos\ProfileViewTest\ProfileViewTest\bin\Debug\ProfileViewTest.pdb
+C:\Users\Ricky\source\repos\ProfileViewTest\ProfileViewTest\obj\Debug\MainWindow.g.cs
+C:\Users\Ricky\source\repos\ProfileViewTest\ProfileViewTest\obj\Debug\App.g.cs
+C:\Users\Ricky\source\repos\ProfileViewTest\ProfileViewTest\obj\Debug\ProfileViewTest_MarkupCompile.cache
+C:\Users\Ricky\source\repos\ProfileViewTest\ProfileViewTest\obj\Debug\ProfileViewTest_MarkupCompile.lref
+C:\Users\Ricky\source\repos\ProfileViewTest\ProfileViewTest\obj\Debug\MainWindow.baml
+C:\Users\Ricky\source\repos\ProfileViewTest\ProfileViewTest\obj\Debug\ProfileViewTest.g.resources
+C:\Users\Ricky\source\repos\ProfileViewTest\ProfileViewTest\obj\Debug\ProfileViewTest.Properties.Resources.resources
+C:\Users\Ricky\source\repos\ProfileViewTest\ProfileViewTest\obj\Debug\ProfileViewTest.csproj.GenerateResource.Cache
+C:\Users\Ricky\source\repos\ProfileViewTest\ProfileViewTest\obj\Debug\ProfileViewTest.csproj.CoreCompileInputs.cache
+C:\Users\Ricky\source\repos\ProfileViewTest\ProfileViewTest\obj\Debug\ProfileViewTest.exe
+C:\Users\Ricky\source\repos\ProfileViewTest\ProfileViewTest\obj\Debug\ProfileViewTest.pdb
