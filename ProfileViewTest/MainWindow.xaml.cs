@@ -13,6 +13,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace ProfileViewTest
 {
@@ -30,10 +33,15 @@ namespace ProfileViewTest
 
         public void PageLoaded(object sender, RoutedEventArgs e)
         {
+            IEnumerable<String> filesD = GetAllFiles("D:\\Ricky\\Documents\\", "*.txt");
+            IEnumerable<String> filesC = GetAllFiles("C:\\Users\\Ricky\\source\\", ".txt");
+            IEnumerable<String> filesPath = filesC.Concat(filesD);
+            IEnumerable<String> files = Enumerable.Empty<String>();
 
-            IEnumerable<String> filesD = GetAllFiles("D:\\Ricky\\Documents\\", "*.cs");
-            IEnumerable<String> filesC = GetAllFiles("C:\\Users\\Ricky\\source\\", "*.cs");
-            IEnumerable<String> files = filesC.Concat(filesD);
+            foreach (string fileName in filesPath)
+            {
+                files = files.Concat(new[] {System.IO.Path.GetFileNameWithoutExtension(fileName) } );
+            }
 
             foreach (string fileName in files)
             {
